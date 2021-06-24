@@ -1,7 +1,8 @@
-import Expenses from "./components/Expenses";
+import React from "react";
+import Expenses from "./components/Expenses/Expenses";
 import "./index.css";
 
-function App() {
+const App = () => {
   const expenses = [
     {
       id: "e1",
@@ -24,12 +25,20 @@ function App() {
     },
   ];
 
+  //Not Using JSX syntax
+  // return React.createElement(
+  //   "div",
+  //   {},
+  //   React.createElement("h2", {}, "Let's get Started!"),
+  //   React.createElement(Expenses, { expenses: expenses })
+  // );
+
   return (
     <div className="App">
       <h2>Let's get Started!</h2>
       <Expenses expenses={expenses} />
     </div>
   );
-}
+};
 
 export default App;
